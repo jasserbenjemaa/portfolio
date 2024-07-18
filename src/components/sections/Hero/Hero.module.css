@@ -1,0 +1,51 @@
+/* --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;*/
+/*"SF Mono", "Fira Code", "Fira Mono", */
+.hero {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  padding: 130px 0 0 200px;
+}
+h1 {
+  margin: 0 0 30px 4px;
+  color: rgb(7, 6, 6);
+  font-size: 16px;
+  color: hsl(184, 100%, 50%);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 0.1;
+  color: #f0f0f4;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 5px;
+  font-size: 60px;
+  font-weight: 600;
+  color: #8f96a3;
+  line-height: 0.9;
+}
+
+p {
+  max-width: 540px;
+  color: #8f96a3;
+}
+a {
+  color: hsl(184, 100%, 50%);
+  text-decoration: none;
+}
+.resume-link {
+  padding: 10px;
+  border: 1px hsl(184, 100%, 50%) solid;
+  margin-top: 50px;
+  width: 100px;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
