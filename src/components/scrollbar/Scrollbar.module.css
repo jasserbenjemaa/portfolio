@@ -1,0 +1,38 @@
+.bar {
+  position: fixed;
+  top: 130px;
+  right: 49px;
+  height: 70%;
+  background-color: hsl(184, 100%, 50%);
+  width: 2px;
+  z-index: 1;
+}
+.bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(5px);
+}
+.bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(5px);
+}
+
+.progressbar {
+  position: fixed;
+  right: 49px;
+  top: 130px;
+  z-index: 2;
+  background-color: #fff;
+  width: 2px;
+}

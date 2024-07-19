@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./navbar.module.css";
-
 import Logo from "../../icons/logo";
 const nav = [" Home", " About", " Projects", " Contact"];
 const Navbar = () => {
@@ -18,7 +17,8 @@ const Navbar = () => {
         ))}
         <a
           className={classes["resume-link"]}
-          href="/"
+          href="resume.pdf"
+          download={"./resume.pdf"}
           target="_blank"
           rel="noreferrer"
         >
