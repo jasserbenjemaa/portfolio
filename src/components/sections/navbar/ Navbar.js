@@ -10,7 +10,7 @@ const Navbar = () => {
       </a>
       <ul className={classes["links"]}>
         {nav.map((e, i) => (
-          <li href={`#${e}`}>
+          <li href={`#${e}`} key={i}>
             <span className={classes["number"]}>0{i + 1}.</span>
             {e}
           </li>

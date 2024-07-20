@@ -3,13 +3,11 @@
 .hero {
   flex-direction: column;
   align-items: flex-start;
-  height: 100vh;
-  min-height: 100vh;
-  padding: 0;
+  height: 80vh;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   padding: 150px 0 0 200px;
 }
-h1 {
+.hi {
   margin: 0 0 30px 4px;
   color: rgb(7, 6, 6);
   font-size: 16px;
@@ -17,7 +15,7 @@ h1 {
   font-weight: 400;
 }
 
-h2 {
+.name {
   font-size: 70px;
   line-height: 0.1;
   letter-spacing: 0px;
@@ -25,7 +23,7 @@ h2 {
   font-weight: 600;
 }
 
-h3 {
+.job {
   margin-top: 5px;
   letter-spacing: 0px;
   font-size: 70px;
@@ -34,7 +32,7 @@ h3 {
   line-height: 0.9;
 }
 
-p {
+.para {
   max-width: 540px;
   color: #8f96a3;
 }

@@ -1,0 +1,30 @@
+.tec {
+  color: black;
+  padding: 10px;
+}
+.icon {
+  height: 40px;
+
+  fill: hsl(184, 100%, 50%);
+  width: 40px;
+  padding: 20px 20px 0 20px;
+}
+.header {
+  display: flex;
+  color: #f0f0f4;
+}
+
+.end {
+  font-size: 24px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 100px;
+  list-style-type: circle;
+  color: #8f96a3;
+}
+li::marker {
+  color: hsl(184, 100%, 50%);
+  font-size: 25px;
+}

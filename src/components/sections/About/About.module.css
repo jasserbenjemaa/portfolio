@@ -1,0 +1,34 @@
+.about {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 80vh;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  padding: 0 250px 100px 250px;
+}
+.about-me {
+  font-size: 26px;
+  color: #f0f0f4;
+}
+
+.about-me::before {
+  position: relative;
+  font-size: 22px;
+  content: "01. ";
+  color: hsl(184, 100%, 50%);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.paragraph {
+  grid-row: 1 / 3;
+  padding: 50px 50px 0 0;
+}
+.para {
+  max-width: 540px;
+  color: #8f96a3;
+}
