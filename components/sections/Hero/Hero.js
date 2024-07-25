@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import classes from "./Hero.module.css";
 import ScrollingMotion from "../../ScrollingMotion";
@@ -30,7 +31,7 @@ const Hero = () => {
     <div className={classes["hero"]}>
       {items.map((item, i) => (
         <ScrollingMotion key={i} styleProps={{ delay: i / 10 }}>
-          <div>{item}</div>
+          {item}
         </ScrollingMotion>
       ))}
     </div>

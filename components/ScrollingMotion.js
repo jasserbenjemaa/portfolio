@@ -10,24 +10,23 @@ const ScrollingMotion = ({ children, styleProps = { delay: 0 } }) => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
   return (
-    <div ref={ref}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{
-          duration: 0.25,
-          delay: 0.3 + styleProps.delay,
-        }}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{
+        duration: 0.25,
+        delay: 0.3 + styleProps.delay,
+      }}
+      ref={ref}
+    >
+      {children}
+    </motion.div>
   );
 };
 
