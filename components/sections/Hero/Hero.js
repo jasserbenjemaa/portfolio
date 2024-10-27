@@ -9,16 +9,11 @@ const three = <h3 className={classes["job"]}>a software engineer </h3>;
 const four = (
   <>
     <p className={classes["para"]}>
-      I’m a software engineer specializing in building (and occasionally
-      designing) exceptional digital experiences. Currently, I’m focused on
-      building accessible, human-centered products at{" "}
-      <a
-        href="https://upstatement.com/"
-        target="_blank"
-        rel="noreferrer"
-        className={classes["link"]}
-      >
-        Upstatement
+      Hey there! I`&#39;m Jasser, a computer science student with a love for web
+      development. These days, I`&#39;`m diving deep into the world of ReactJS
+      and NodeJS.{" "}
+      <a href="mailto:jasserj663@gmail.com" className={classes["link"]}>
+        Get In Touch
       </a>
       .
     </p>
@@ -28,7 +23,7 @@ const four = (
 const items = [one, two, three, four];
 const Hero = () => {
   return (
-    <div className={classes["hero"]}>
+    <div className={classes["container"]}>
       {items.map((item, i) => (
         <ScrollingMotion key={i} styleProps={{ delay: i / 10 }}>
           {item}
