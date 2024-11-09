@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #233554;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0 15px 0 15px;
+  cursor: pointer;
+}
+.project-name {
+  font-weight: 600;
+  color: #ccd6f6;
+}
+.icon-div {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  height: 17px;
+  color: #ccd6f6;
+  width: 17px;
+}
+.external-icon {
+  height: 20px;
+  width: 20px;
+}
+.container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  right: 0;
+  background-color: #ccd6f6;
+}
+
+.clicked {
+  color: #00eeff;
+}
+
+.container.clicked::after {
+  background-color: #00eeff;
+}
