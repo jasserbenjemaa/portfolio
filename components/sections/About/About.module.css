@@ -7,37 +7,13 @@
   align-items: flex-start;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   height: 100vh;
-  padding: 140px 0 0 170px;
+  padding: 45px 0 0 170px;
 }
 
-.hi {
-  margin: 0 0 15px 4px;
-  color: rgb(7, 6, 6);
-  font-size: 16px;
-  color: rgb(0, 238, 255);
-  font-weight: 400;
-}
-
-.name {
-  font-size: 70px;
-  letter-spacing: 0px;
-  color: #ccd6f6;
-  font-weight: 800;
-}
-
-.job {
-  margin-top: 5px;
-  letter-spacing: 0px;
-  font-size: 70px;
-  font-weight: 600;
-  color: #8f96a3;
-  line-height: 0.9;
-}
 
 .para {
   max-width: 540px;
   color: #8f96a3;
-  margin-top: 50px;
 }
 
 .link {

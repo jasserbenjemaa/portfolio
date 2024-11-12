@@ -9,8 +9,8 @@ const three = <h3 className={classes["job"]}>a software engineer </h3>;
 const four = (
   <>
     <p className={classes["para"]}>
-      Hey there! I`&#39;m Jasser, a computer science student with a love for web
-      development. These days, I`&#39;`m diving deep into the world of ReactJS
+      Hey there! I&#39;m Jasser, a computer science student with a love for web
+      development. These days, I&#39;m diving deep into the world of ReactJS
       and NodeJS.{" "}
       <a href="mailto:jasserj663@gmail.com" className={classes["link"]}>
         Get In Touch
