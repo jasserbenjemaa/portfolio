@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import ButtonUI from "../../ui/Button/ButtonUI";
 import projects from "../../../contents/projects/project";
+import NumberedHeading from "../../ui/NumbredHeading/NumbredHeading"
 
 const container = `${classes["container"]}`;
 const wrapper = `${classes["wrapper"]}`;
@@ -18,7 +19,9 @@ const SideProject = () => {
     setNumber(id);
   };
   return (
+    <>
     <div className={container}>
+<NumberedHeading num={2} heading={"Projects"}/>
       <div className={wrapper}>
         <div className={image}>
           <Image
@@ -45,6 +48,7 @@ const SideProject = () => {
         </div>
       </div>
     </div>
+</>
   );
 };
 

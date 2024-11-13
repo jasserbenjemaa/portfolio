@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./navbar.module.css";
 import Logo from "../../icons/logo";
-const nav = [" Home", " About", " Projects", " Contact"];
+const nav = [ " About", " Projects", " Contact"];
 const Navbar = () => {
   return (
     <nav className={classes["nav"]}>

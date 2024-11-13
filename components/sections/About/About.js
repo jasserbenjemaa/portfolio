@@ -2,11 +2,16 @@
 import React from "react";
 import classes from "./About.module.css";
 import ScrollingMotion from "../../ScrollingMotion";
+import NumberedHeading from "../../ui/NumbredHeading/NumbredHeading"
 
 
-const four = (
-  <>
-    <p className={classes["para"]}>
+
+const About = () => {
+  return (
+    <div className={classes["container"]}>
+        <ScrollingMotion >
+    <NumberedHeading num={1} heading={"About Me"}/>
+    <div className={classes["para"]}>
         <p>I’m passionate about creating impactful web experiences.</p>
 
         <h2>My Journey</h2>
@@ -16,19 +21,9 @@ const four = (
         <p>I’m driven by a commitment to building secure, user-friendly applications and have a keen interest in modern tech challenges, like integrating 3D environments and robust user authentication.</p>
        
       .
-    </p>
-  </>
-);
-
-const items = [ four];
-const About = () => {
-  return (
-    <div className={classes["container"]}>
-      {items.map((item, i) => (
-        <ScrollingMotion key={i} styleProps={{ delay: i / 10 }}>
-          {item}
+    </div>
         </ScrollingMotion>
-      ))}
+   
     </div>
   );
 };
