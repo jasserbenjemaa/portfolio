@@ -1,0 +1,179 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 60% 98%; /* Light Slate */
+    --foreground: 240 10% 3.9%; /* Navy */
+    --card: 260 60% 98%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 260 60% 98%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 210 100% 56%; /* Bright Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 240 4.8% 95.9%; /* Light Gray */
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%; /* Slate Gray */
+    --accent: 180 80% 45%; /* Teal */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5.9% 90%; /* Light Gray Border */
+    --input: 240 5.9% 90%;
+    --ring: 210 100% 56%;
+    --radius: 0.3rem;
+
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%; /* Navy */
+    --foreground: 260 60% 98%; /* Light Slate */
+    --card: 240 10% 3.9%;
+    --card-foreground: 260 60% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 260 60% 98%;
+    --primary: 210 100% 56%; /* Bright Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%; /* Dark Gray */
+    --secondary-foreground: 260 60% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%; /* Lighter Slate Gray */
+    --accent: 180 80% 45%; /* Teal */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 3.7% 15.9%; /* Dark Gray Border */
+    --input: 240 3.7% 15.9%;
+    --ring: 210 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+  }
+  p {
+    @apply text-muted-foreground;
+  }
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+}
+
+.text-accent {
+  color: hsl(var(--accent));
+}
+
+.bg-accent-light {
+  background-color: hsl(var(--accent) / 0.1);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active-nav-link {
+  @apply text-primary;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 0;
+  background-color: hsl(var(--primary));
+  transition: height 0.2s ease-in-out;
+}
+
+.nav-link.active-nav-link::before {
+  height: 20px;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: hsl(var(--border));
+  margin-left: 20px;
+}
+
+.scroll-container {
+  scroll-behavior: smooth;
+}
+
+.project-card {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px hsl(var(--primary) / 0.2);
+}
+
+.social-icon {
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.social-icon:hover {
+  transform: translateY(-3px);
+  @apply text-primary;
+}
+
+.numbered-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 40px;
+  width: 100%;
+  white-space: nowrap;
+  font-size: clamp(26px, 5vw, 32px);
+}
+
+.numbered-heading::before {
+  position: relative;
+  bottom: 0px;
+  counter-increment: section;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  color: hsl(var(--primary));
+  font-family: var(--font-mono);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 400;
+}
+
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: hsl(var(--border));
+}
+
+@media (max-width: 768px) {
+  .numbered-heading::after {
+    width: 100px;
+  }
+}
+
+body {
+  counter-reset: section;
+}
